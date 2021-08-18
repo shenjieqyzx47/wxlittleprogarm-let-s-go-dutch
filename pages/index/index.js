@@ -1,3 +1,5 @@
+//该页面功能主要为引导进入小程序，获取用户最新信息并更新至小程序云数据库
+
 // index.js
 // 获取应用实例
 const app = getApp()
@@ -16,6 +18,7 @@ Page({
   },
 
   onLoad() {
+    // 打开应用后获取当前用户的UserInfo（官方数据），比对此小程序数库中的userInfo，更新此小程序数据库UserInfo
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
@@ -71,9 +74,11 @@ Page({
         this.getCloudUserInfo();
       }
     })
+    this.goToEventListPage();
   },
 
-  getCloudUserInfo: function(){
+
+  getCloudUserInfo: function(){ //获取小程序数据库中指定用户的userInfo
     var userOpenID = this.data.userOpenID;
     db.collection("Users").where({_openid:userOpenID}).get().then(res => {
       console.log(res.data[0].userInfo)
@@ -100,6 +105,12 @@ Page({
           }
         })
       }
+    })
+  },
+
+  goToEventListPage: function(){
+    wx.navigateTo({
+      url: '../EventList/EventList',
     })
   }
 })
