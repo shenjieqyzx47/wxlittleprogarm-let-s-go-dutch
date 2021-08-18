@@ -1,0 +1,28 @@
+<!--pages/addEventPage/addEventPage.wxml-->
+<view class="pageContainer">
+  <form bindsubmit="submit">
+    <view class="form-list">
+      <view class="form-item">
+        <view class="form-item-hd">项目名称</view>
+        <view class="form-item-bd">
+          <input type="text" name="eventName"/>
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item-hd">描述</view>
+        <view class="form-item-bd">
+          <input  type="text" name="eventDescription" />
+        </view>
+      </view>
+      <view class="form-item">
+        <view class="form-item-hd">时间</view>
+        <view>
+          <picker mode="date" bindchange='onDateChange' value="{{date}}">
+            <input type="date" value="{{date}}" disabled="true"/>
+          </picker>        
+        </view>
+      </view>
+      <button form-type="submit" class="edit-btn">提交</button>
+    </view>
+  </form>
+</view>

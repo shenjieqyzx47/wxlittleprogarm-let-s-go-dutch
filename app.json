@@ -1,0 +1,18 @@
+{
+  "pages": [    "pages/index/index",
+    "pages/EventList/EventList",
+    "pages/Events/events",
+    "pages/activity/activitypage",
+
+    "pages/addActivityPage/addActivityPage",
+    "pages/addEventPage/addEventPage"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}
