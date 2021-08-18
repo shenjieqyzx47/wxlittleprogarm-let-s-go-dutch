@@ -1,0 +1,14 @@
+<!--pages/EventList/EventList.wxml-->
+<view class="pageContainer">
+  <view class="bodyContainer">
+    <view wx:for="{{list}}" wx:key="id">
+      <view class="eventContainer" bindtap="goToEventPage" data-id="{{item._id}}">
+        <view class="eventTittle">{{item.eventName}}</view>
+      <view class="eventDescription">{{item.eventDescription}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="buttonContainer">
+    <button  class='btn-new' bindtap="goToAddEventPage">新增项目</button>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+/* pages/Events/Events.wxss */
+/* page{
+  background-color: lightblue;
+  padding: 5rpx;
+} */
+
+.pageContainer{
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+
+.tittlContainer{
+  display: flex;
+}
+
+.userinfo-avatar {
+  overflow: hidden;
+  width: 80rpx;
+  height: 80rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: #aaa;
+}
+
+.bodyContainer{
+  height: 95%;
+  width: auto;
+  overflow: auto;
+  padding: 5%;
+}
+
+.eventContainer{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  height: 150rpx;
+  background-color: #f0c9cf;
+  /* background-color: #BDFCC9; */
+  -webkit-box-shadow:0px 3px 3px #c8c8c8 ;
+  -moz-box-shadow:0px 3px 3px #c8c8c8 ;
+  box-shadow:0px 3px 3px #c8c8c8 ;
+  border-radius: 10rpx;
+  margin-bottom: 30rpx;
+}
+
+.eventTittle{
+  height: 75rpx;
+  width: 90%;
+  margin-left: 5%;
+  font-display: relative;
+  font-size: 50rpx;
+  font-family:cursive;
+  font-weight: bold;
+  overflow: hidden;
+  line-height: 75rpx;
+}
+
+.eventDescription{
+  height: 75rpx;
+  margin-left: 5%;
+  width: 90%;
+  font-size: 40rpx;
+  overflow: hidden;
+  line-height: 75rpx;
+}
+
+.buttonContainer{
+  position: fixed;
+  bottom: 50rpx;
+  width:100%;
+  vertical-align: center;
+  overflow: auto;
+}
+
+.btn-new{
+  width: 300rpx;
+  height: 80rpx;
+  margin: 0 auto;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: middle;
+  background-color: #47a86c;
+  border-radius: 20rpx;
+  color: #fff;
+}

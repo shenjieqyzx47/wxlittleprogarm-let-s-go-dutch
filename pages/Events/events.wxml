@@ -1,0 +1,22 @@
+<!--pages/Events/events.wxml-->
+<view class='pageContainer'>
+  <view class='formContainer'>
+    <view class='activityContainer'  wx:for="{{activities}}" wx:key='id' data-id='{{item._id}}' bindtap="navigateToAcvitityPage">
+      <view class='imageContainer'>
+        <image class='imageself' src='{{iconaddress[item.activityCategory]}}'></image>
+      </view>
+      <view class= 'textContainer'>
+        <view class='namedescriptionContainer'>
+          <view class='tittleContainer'>{{item.activityName}}</view>
+          <view class='descriptionContainer'>{{item.description}}</view>
+        </view>
+        <view class='costContainer'>${{item.costamount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='btnContainer'>
+    <button class='btn-new' bindtap="navigateToAddActivityPage" data-id="{{eventid}}">新增消费活动</button>
+  </view>
+</view>
+
+

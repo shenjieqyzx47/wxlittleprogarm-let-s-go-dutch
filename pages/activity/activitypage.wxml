@@ -1,0 +1,17 @@
+<!--pages/activity/activitypage.wxml-->
+<view class='pageContainer'>
+  <view class='cellcontainer'>
+    <view class="cells">
+      <block wx:for="{{cells}}" wx:for-item="cellItem" wx:for-index="cellIndex" wx:key="cells">
+          <view class="cell">
+              <view class="cell-bd">{{cellItem.title}}</view>
+              <view class="cell-ft">{{cellItem.text}}</view>
+          </view>
+      </block>
+    </view>
+  </view>
+  <view class='btnContainer'>
+    <button class='btn-change' style="margin-left:30rpx">修改此笔记录</button>
+    <button class='btn-del' style="margin-left:30rpx">删除此笔记录</button>
+  </view>
+</view>
